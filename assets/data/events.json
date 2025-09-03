@@ -1,0 +1,716 @@
+[
+  {
+    "id": "1",
+    "title": "Sunset Yoga in the Park",
+    "description": "Sunset Yoga in the Park - A special event you shouldn't miss.",
+    "category": "Health & Wellness",
+    "startDate": "2025-07-02T18:00:00Z",
+    "endDate": "2025-07-02T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/101/600/300",
+    "location": {
+      "name": "Lincoln Center Plaza",
+      "lat": 40.772464,
+      "lng": -73.983489
+    }
+  },
+  {
+    "id": "2",
+    "title": "Open Air Jazz Festival",
+    "description": "Open Air Jazz Festival - A special event you shouldn't miss.",
+    "category": "Music",
+    "startDate": "2025-07-03T18:00:00Z",
+    "endDate": "2025-07-03T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/102/600/300",
+    "location": {
+      "name": "Brooklyn Navy Yard",
+      "lat": 40.702066,
+      "lng": -73.971636
+    }
+  },
+  {
+    "id": "3",
+    "title": "Tech Startup Pitch Night",
+    "description": "Tech Startup Pitch Night - A special event you shouldn't miss.",
+    "category": "Technology",
+    "startDate": "2025-07-04T18:00:00Z",
+    "endDate": "2025-07-04T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/103/600/300",
+    "location": {
+      "name": "Union Square",
+      "lat": 40.735863,
+      "lng": -73.991084
+    }
+  },
+  {
+    "id": "4",
+    "title": "Farmers Market Weekend",
+    "description": "Farmers Market Weekend - A special event you shouldn't miss.",
+    "category": "Food & Drink",
+    "startDate": "2025-07-05T18:00:00Z",
+    "endDate": "2025-07-05T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/104/600/300",
+    "location": {
+      "name": "Delacorte Theater",
+      "lat": 40.781324,
+      "lng": -73.9665
+    }
+  },
+  {
+    "id": "5",
+    "title": "Shakespeare in the Park: Hamlet",
+    "description": "Shakespeare in the Park: Hamlet - A special event you shouldn't miss.",
+    "category": "Theater",
+    "startDate": "2025-07-06T18:00:00Z",
+    "endDate": "2025-07-06T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/105/600/300",
+    "location": {
+      "name": "Times Square",
+      "lat": 40.758896,
+      "lng": -73.98513
+    }
+  },
+  {
+    "id": "6",
+    "title": "City Marathon 10K",
+    "description": "City Marathon 10K - A special event you shouldn't miss.",
+    "category": "Sports",
+    "startDate": "2025-07-07T18:00:00Z",
+    "endDate": "2025-07-07T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/106/600/300",
+    "location": {
+      "name": "SoHo Arts District",
+      "lat": 40.723301,
+      "lng": -74.002988
+    }
+  },
+  {
+    "id": "7",
+    "title": "Photography Workshop",
+    "description": "Photography Workshop - A special event you shouldn't miss.",
+    "category": "Education",
+    "startDate": "2025-07-08T18:00:00Z",
+    "endDate": "2025-07-08T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/107/600/300",
+    "location": {
+      "name": "Chelsea Market",
+      "lat": 40.742438,
+      "lng": -74.006191
+    }
+  },
+  {
+    "id": "8",
+    "title": "Wine & Cheese Tasting Night",
+    "description": "Wine & Cheese Tasting Night - A special event you shouldn't miss.",
+    "category": "Food & Drink",
+    "startDate": "2025-07-09T18:00:00Z",
+    "endDate": "2025-07-09T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/108/600/300",
+    "location": {
+      "name": "Comedy Cellar",
+      "lat": 40.730599,
+      "lng": -74.002684
+    }
+  },
+  {
+    "id": "9",
+    "title": "Stand-Up Comedy Night",
+    "description": "Stand-Up Comedy Night - A special event you shouldn't miss.",
+    "category": "Comedy",
+    "startDate": "2025-07-10T18:00:00Z",
+    "endDate": "2025-07-10T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/109/600/300",
+    "location": {
+      "name": "Brooklyn Bridge Park",
+      "lat": 40.700291,
+      "lng": -73.996699
+    }
+  },
+  {
+    "id": "10",
+    "title": "Street Food Festival",
+    "description": "Street Food Festival - A special event you shouldn't miss.",
+    "category": "Food & Drink",
+    "startDate": "2025-07-11T18:00:00Z",
+    "endDate": "2025-07-11T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/110/600/300",
+    "location": {
+      "name": "Carnegie Hall",
+      "lat": 40.765126,
+      "lng": -73.979924
+    }
+  },
+  {
+    "id": "11",
+    "title": "Classical Orchestra Evening",
+    "description": "Classical Orchestra Evening - A special event you shouldn't miss.",
+    "category": "Music",
+    "startDate": "2025-07-12T18:00:00Z",
+    "endDate": "2025-07-12T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/111/600/300",
+    "location": {
+      "name": "Javits Center",
+      "lat": 40.757777,
+      "lng": -74.00259
+    }
+  },
+  {
+    "id": "12",
+    "title": "AI & Machine Learning Conference",
+    "description": "AI & Machine Learning Conference - A special event you shouldn't miss.",
+    "category": "Technology",
+    "startDate": "2025-07-13T18:00:00Z",
+    "endDate": "2025-07-13T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/112/600/300",
+    "location": {
+      "name": "Prospect Park",
+      "lat": 40.660204,
+      "lng": -73.968956
+    }
+  },
+  {
+    "id": "13",
+    "title": "Charity Fun Run",
+    "description": "Charity Fun Run - A special event you shouldn't miss.",
+    "category": "Sports",
+    "startDate": "2025-07-14T18:00:00Z",
+    "endDate": "2025-07-14T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/113/600/300",
+    "location": {
+      "name": "SOB's Nightclub",
+      "lat": 40.728393,
+      "lng": -74.002159
+    }
+  },
+  {
+    "id": "14",
+    "title": "Salsa Dance Night",
+    "description": "Salsa Dance Night - A special event you shouldn't miss.",
+    "category": "Dance",
+    "startDate": "2025-07-15T18:00:00Z",
+    "endDate": "2025-07-15T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/114/600/300",
+    "location": {
+      "name": "Film Forum",
+      "lat": 40.729023,
+      "lng": -74.004821
+    }
+  },
+  {
+    "id": "15",
+    "title": "Indie Film Screening",
+    "description": "Indie Film Screening - A special event you shouldn't miss.",
+    "category": "Film",
+    "startDate": "2025-07-16T18:00:00Z",
+    "endDate": "2025-07-16T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/115/600/300",
+    "location": {
+      "name": "Institute of Culinary Education",
+      "lat": 40.742959,
+      "lng": -74.007118
+    }
+  },
+  {
+    "id": "16",
+    "title": "Baking Masterclass",
+    "description": "Baking Masterclass - A special event you shouldn't miss.",
+    "category": "Education",
+    "startDate": "2025-07-17T18:00:00Z",
+    "endDate": "2025-07-17T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/116/600/300",
+    "location": {
+      "name": "Madison Square Garden",
+      "lat": 40.750504,
+      "lng": -73.993439
+    }
+  },
+  {
+    "id": "17",
+    "title": "Rock Concert Live",
+    "description": "Rock Concert Live - A special event you shouldn't miss.",
+    "category": "Music",
+    "startDate": "2025-07-18T18:00:00Z",
+    "endDate": "2025-07-18T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/117/600/300",
+    "location": {
+      "name": "Brooklyn Botanic Garden",
+      "lat": 40.669411,
+      "lng": -73.962882
+    }
+  },
+  {
+    "id": "18",
+    "title": "Cycling Tour City",
+    "description": "Cycling Tour City - A special event you shouldn't miss.",
+    "category": "Sports",
+    "startDate": "2025-07-19T18:00:00Z",
+    "endDate": "2025-07-19T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/118/600/300",
+    "location": {
+      "name": "MoMA",
+      "lat": 40.761433,
+      "lng": -73.977622
+    }
+  },
+  {
+    "id": "19",
+    "title": "Painting Workshop",
+    "description": "Painting Workshop - A special event you shouldn't miss.",
+    "category": "Arts",
+    "startDate": "2025-07-20T18:00:00Z",
+    "endDate": "2025-07-20T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/119/600/300",
+    "location": {
+      "name": "Brooklyn Brewery",
+      "lat": 40.721623,
+      "lng": -73.957662
+    }
+  },
+  {
+    "id": "20",
+    "title": "Craft Beer Festival",
+    "description": "Craft Beer Festival - A special event you shouldn't miss.",
+    "category": "Food & Drink",
+    "startDate": "2025-07-21T18:00:00Z",
+    "endDate": "2025-07-21T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/120/600/300",
+    "location": {
+      "name": "Apollo Theater",
+      "lat": 40.81,
+      "lng": -73.95
+    }
+  },
+  {
+    "id": "21",
+    "title": "Hip Hop Battle",
+    "description": "Hip Hop Battle - A special event you shouldn't miss.",
+    "category": "Dance",
+    "startDate": "2025-07-22T18:00:00Z",
+    "endDate": "2025-07-22T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/121/600/300",
+    "location": {
+      "name": "NY Hall of Science",
+      "lat": 40.747143,
+      "lng": -73.851524
+    }
+  },
+  {
+    "id": "22",
+    "title": "Science Fair",
+    "description": "Science Fair - A special event you shouldn't miss.",
+    "category": "Education",
+    "startDate": "2025-07-23T18:00:00Z",
+    "endDate": "2025-07-23T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/122/600/300",
+    "location": {
+      "name": "Queens Night Market",
+      "lat": 40.745051,
+      "lng": -73.846496
+    }
+  },
+  {
+    "id": "23",
+    "title": "Food Truck Fiesta",
+    "description": "Food Truck Fiesta - A special event you shouldn't miss.",
+    "category": "Food & Drink",
+    "startDate": "2025-07-24T18:00:00Z",
+    "endDate": "2025-07-24T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/123/600/300",
+    "location": {
+      "name": "Gotham Comedy Club",
+      "lat": 40.744034,
+      "lng": -73.995944
+    }
+  },
+  {
+    "id": "24",
+    "title": "Stand-Up Open Mic",
+    "description": "Stand-Up Open Mic - A special event you shouldn't miss.",
+    "category": "Comedy",
+    "startDate": "2025-07-25T18:00:00Z",
+    "endDate": "2025-07-25T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/124/600/300",
+    "location": {
+      "name": "Whitney Museum of American Art",
+      "lat": 40.739587,
+      "lng": -74.008863
+    }
+  },
+  {
+    "id": "25",
+    "title": "Digital Art Exhibition",
+    "description": "Digital Art Exhibition - A special event you shouldn't miss.",
+    "category": "Arts",
+    "startDate": "2025-07-26T18:00:00Z",
+    "endDate": "2025-07-26T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/125/600/300",
+    "location": {
+      "name": "NYU Tandon School of Engineering",
+      "lat": 40.694203,
+      "lng": -73.986579
+    }
+  },
+  {
+    "id": "26",
+    "title": "Startup Hackathon",
+    "description": "Startup Hackathon - A special event you shouldn't miss.",
+    "category": "Technology",
+    "startDate": "2025-07-27T18:00:00Z",
+    "endDate": "2025-07-27T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/126/600/300",
+    "location": {
+      "name": "Van Cortlandt Park",
+      "lat": 40.897222,
+      "lng": -73.886111
+    }
+  },
+  {
+    "id": "27",
+    "title": "Marathon Relay",
+    "description": "Marathon Relay - A special event you shouldn't miss.",
+    "category": "Sports",
+    "startDate": "2025-07-28T18:00:00Z",
+    "endDate": "2025-07-28T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/127/600/300",
+    "location": {
+      "name": "Metropolitan Opera House",
+      "lat": 40.772222,
+      "lng": -73.983333
+    }
+  },
+  {
+    "id": "28",
+    "title": "Opera Night",
+    "description": "Opera Night - A special event you shouldn't miss.",
+    "category": "Theater",
+    "startDate": "2025-07-29T18:00:00Z",
+    "endDate": "2025-07-29T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/128/600/300",
+    "location": {
+      "name": "The Uncommons Board Game Cafe",
+      "lat": 40.730148,
+      "lng": -73.999638
+    }
+  },
+  {
+    "id": "29",
+    "title": "Board Games Meetup",
+    "description": "Board Games Meetup - A special event you shouldn't miss.",
+    "category": "Leisure",
+    "startDate": "2025-07-30T18:00:00Z",
+    "endDate": "2025-07-30T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/129/600/300",
+    "location": {
+      "name": "International Center of Photography",
+      "lat": 40.752054,
+      "lng": -73.981893
+    }
+  },
+  {
+    "id": "30",
+    "title": "Photography Exhibition",
+    "description": "Photography Exhibition - A special event you shouldn't miss.",
+    "category": "Arts",
+    "startDate": "2025-07-31T18:00:00Z",
+    "endDate": "2025-07-31T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/130/600/300",
+    "location": {
+      "name": "Bowery Poetry Club",
+      "lat": 40.725567,
+      "lng": -73.992207
+    }
+  },
+  {
+    "id": "31",
+    "title": "Poetry Slam",
+    "description": "Poetry Slam - A special event you shouldn't miss.",
+    "category": "Literature",
+    "startDate": "2025-08-01T18:00:00Z",
+    "endDate": "2025-08-01T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/131/600/300",
+    "location": {
+      "name": "Fifth Avenue",
+      "lat": 40.774233,
+      "lng": -73.965356
+    }
+  },
+  {
+    "id": "32",
+    "title": "Street Parade",
+    "description": "Street Parade - A special event you shouldn't miss.",
+    "category": "Culture",
+    "startDate": "2025-08-02T18:00:00Z",
+    "endDate": "2025-08-02T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/132/600/300",
+    "location": {
+      "name": "Brooklyn Podcast Studio",
+      "lat": 40.6756,
+      "lng": -73.9706
+    }
+  },
+  {
+    "id": "33",
+    "title": "Live Podcast Recording",
+    "description": "Live Podcast Recording - A special event you shouldn't miss.",
+    "category": "Media",
+    "startDate": "2025-08-03T18:00:00Z",
+    "endDate": "2025-08-03T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/133/600/300",
+    "location": {
+      "name": "Eataly NYC Flatiron",
+      "lat": 40.741112,
+      "lng": -73.989723
+    }
+  },
+  {
+    "id": "34",
+    "title": "Cooking with Chefs",
+    "description": "Cooking with Chefs - A special event you shouldn't miss.",
+    "category": "Food & Drink",
+    "startDate": "2025-08-04T18:00:00Z",
+    "endDate": "2025-08-04T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/134/600/300",
+    "location": {
+      "name": "VR World NYC",
+      "lat": 40.752998,
+      "lng": -73.983375
+    }
+  },
+  {
+    "id": "35",
+    "title": "VR Experience Expo",
+    "description": "VR Experience Expo - A special event you shouldn't miss.",
+    "category": "Technology",
+    "startDate": "2025-08-05T18:00:00Z",
+    "endDate": "2025-08-05T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/135/600/300",
+    "location": {
+      "name": "The Plaza Hotel",
+      "lat": 40.764356,
+      "lng": -73.974698
+    }
+  },
+  {
+    "id": "36",
+    "title": "Charity Gala Dinner",
+    "description": "Charity Gala Dinner - A special event you shouldn't miss.",
+    "category": "Charity",
+    "startDate": "2025-08-06T18:00:00Z",
+    "endDate": "2025-08-06T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/136/600/300",
+    "location": {
+      "name": "Yoga to the People Studio",
+      "lat": 40.729171,
+      "lng": -73.990373
+    }
+  },
+  {
+    "id": "37",
+    "title": "Wellness Retreat",
+    "description": "Wellness Retreat - A special event you shouldn't miss.",
+    "category": "Health & Wellness",
+    "startDate": "2025-08-07T18:00:00Z",
+    "endDate": "2025-08-07T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/137/600/300",
+    "location": {
+      "name": "Bryant Park",
+      "lat": 40.753596,
+      "lng": -73.983232
+    }
+  },
+  {
+    "id": "38",
+    "title": "Outdoor Cinema Night",
+    "description": "Outdoor Cinema Night - A special event you shouldn't miss.",
+    "category": "Film",
+    "startDate": "2025-08-08T18:00:00Z",
+    "endDate": "2025-08-08T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/138/600/300",
+    "location": {
+      "name": "Randall\u2019s Island Park",
+      "lat": 40.793227,
+      "lng": -73.922453
+    }
+  },
+  {
+    "id": "39",
+    "title": "Electronic Music Festival",
+    "description": "Electronic Music Festival - A special event you shouldn't miss.",
+    "category": "Music",
+    "startDate": "2025-08-09T18:00:00Z",
+    "endDate": "2025-08-09T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/139/600/300",
+    "location": {
+      "name": "Hudson River Park",
+      "lat": 40.739713,
+      "lng": -74.010283
+    }
+  },
+  {
+    "id": "40",
+    "title": "Kayaking Adventure",
+    "description": "Kayaking Adventure - A special event you shouldn't miss.",
+    "category": "Sports",
+    "startDate": "2025-08-10T18:00:00Z",
+    "endDate": "2025-08-10T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/140/600/300",
+    "location": {
+      "name": "The New York Public Library",
+      "lat": 40.753182,
+      "lng": -73.982253
+    }
+  },
+  {
+    "id": "41",
+    "title": "Book Fair",
+    "description": "Book Fair - A special event you shouldn't miss.",
+    "category": "Literature",
+    "startDate": "2025-08-11T18:00:00Z",
+    "endDate": "2025-08-11T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/141/600/300",
+    "location": {
+      "name": "Flatiron School",
+      "lat": 40.705076,
+      "lng": -74.013664
+    }
+  },
+  {
+    "id": "42",
+    "title": "Coding Bootcamp Weekend",
+    "description": "Coding Bootcamp Weekend - A special event you shouldn't miss.",
+    "category": "Education",
+    "startDate": "2025-08-12T18:00:00Z",
+    "endDate": "2025-08-12T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/142/600/300",
+    "location": {
+      "name": "Joyce Theater",
+      "lat": 40.739521,
+      "lng": -74.001572
+    }
+  },
+  {
+    "id": "43",
+    "title": "Modern Dance Show",
+    "description": "Modern Dance Show - A special event you shouldn't miss.",
+    "category": "Dance",
+    "startDate": "2025-08-13T18:00:00Z",
+    "endDate": "2025-08-13T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/143/600/300",
+    "location": {
+      "name": "Brooklyn Flea Market",
+      "lat": 40.721765,
+      "lng": -73.957609
+    }
+  },
+  {
+    "id": "44",
+    "title": "Crafts & Makers Fair",
+    "description": "Crafts & Makers Fair - A special event you shouldn't miss.",
+    "category": "Arts",
+    "startDate": "2025-08-14T18:00:00Z",
+    "endDate": "2025-08-14T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/144/600/300",
+    "location": {
+      "name": "Queens Museum",
+      "lat": 40.745876,
+      "lng": -73.846918
+    }
+  },
+  {
+    "id": "45",
+    "title": "Cultural Exchange Night",
+    "description": "Cultural Exchange Night - A special event you shouldn't miss.",
+    "category": "Culture",
+    "startDate": "2025-08-15T18:00:00Z",
+    "endDate": "2025-08-15T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/145/600/300",
+    "location": {
+      "name": "Barclays Center",
+      "lat": 40.68265,
+      "lng": -73.9754
+    }
+  },
+  {
+    "id": "46",
+    "title": "Gaming Tournament",
+    "description": "Gaming Tournament - A special event you shouldn't miss.",
+    "category": "Technology",
+    "startDate": "2025-08-16T18:00:00Z",
+    "endDate": "2025-08-16T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/146/600/300",
+    "location": {
+      "name": "Bushwick Collective Street Art",
+      "lat": 40.7066,
+      "lng": -73.9215
+    }
+  },
+  {
+    "id": "47",
+    "title": "Street Art Festival",
+    "description": "Street Art Festival - A special event you shouldn't miss.",
+    "category": "Arts",
+    "startDate": "2025-08-17T18:00:00Z",
+    "endDate": "2025-08-17T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/147/600/300",
+    "location": {
+      "name": "City Winery NYC",
+      "lat": 40.726518,
+      "lng": -74.007228
+    }
+  },
+  {
+    "id": "48",
+    "title": "Wine Harvest Celebration",
+    "description": "Wine Harvest Celebration - A special event you shouldn't miss.",
+    "category": "Food & Drink",
+    "startDate": "2025-08-18T18:00:00Z",
+    "endDate": "2025-08-18T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/148/600/300",
+    "location": {
+      "name": "Greenwich House",
+      "lat": 40.73379,
+      "lng": -74.002005
+    }
+  },
+  {
+    "id": "49",
+    "title": "Mindfulness Workshop",
+    "description": "Mindfulness Workshop - A special event you shouldn't miss.",
+    "category": "Health & Wellness",
+    "startDate": "2025-08-19T18:00:00Z",
+    "endDate": "2025-08-19T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/149/600/300",
+    "location": {
+      "name": "Battery Park",
+      "lat": 40.703277,
+      "lng": -74.017028
+    }
+  },
+  {
+    "id": "50",
+    "title": "Community BBQ",
+    "description": "Community BBQ - A special event you shouldn't miss.",
+    "category": "Food & Drink",
+    "startDate": "2025-08-20T18:00:00Z",
+    "endDate": "2025-08-20T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/150/600/300",
+    "location": {
+      "name": "Central Park Great Lawn",
+      "lat": 40.7828647,
+      "lng": -73.9653551
+    }
+  },
+  {
+    "id": "51",
+    "title": "New Year Fireworks",
+    "description": "New Year Fireworks - A special event you shouldn't miss.",
+    "category": "Culture",
+    "startDate": "2025-08-21T18:00:00Z",
+    "endDate": "2025-08-21T20:00:00Z",
+    "imageUrl": "https://picsum.photos/id/151/600/300",
+    "location": {
+      "name": "Lincoln Center Plaza",
+      "lat": 40.772464,
+      "lng": -73.983489
+    }
+  }
+]
