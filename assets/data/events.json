@@ -1,9 +1,12 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "title": "Sunset Yoga in the Park",
     "description": "Sunset Yoga in the Park - A special event you shouldn't miss.",
-    "category": "Health & Wellness",
+    "category": {
+      "id": 1,
+      "name": "Health & Wellness"
+    },
     "startDate": "2025-07-02T18:00:00Z",
     "endDate": "2025-07-02T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/101/600/300",
@@ -14,10 +17,13 @@
     }
   },
   {
-    "id": "2",
+    "id": 2,
     "title": "Open Air Jazz Festival",
     "description": "Open Air Jazz Festival - A special event you shouldn't miss.",
-    "category": "Music",
+    "category": {
+      "id": 2,
+      "name": "Music"
+    },
     "startDate": "2025-07-03T18:00:00Z",
     "endDate": "2025-07-03T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/102/600/300",
@@ -28,10 +34,13 @@
     }
   },
   {
-    "id": "3",
+    "id": 3,
     "title": "Tech Startup Pitch Night",
     "description": "Tech Startup Pitch Night - A special event you shouldn't miss.",
-    "category": "Technology",
+    "category": {
+      "id": 3,
+      "name": "Technology"
+    },
     "startDate": "2025-07-04T18:00:00Z",
     "endDate": "2025-07-04T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/103/600/300",
@@ -42,10 +51,13 @@
     }
   },
   {
-    "id": "4",
+    "id": 4,
     "title": "Farmers Market Weekend",
     "description": "Farmers Market Weekend - A special event you shouldn't miss.",
-    "category": "Food & Drink",
+    "category": {
+      "id": 4,
+      "name": "Food & Drink"
+    },
     "startDate": "2025-07-05T18:00:00Z",
     "endDate": "2025-07-05T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/104/600/300",
@@ -56,10 +68,13 @@
     }
   },
   {
-    "id": "5",
+    "id": 5,
     "title": "Shakespeare in the Park: Hamlet",
     "description": "Shakespeare in the Park: Hamlet - A special event you shouldn't miss.",
-    "category": "Theater",
+    "category": {
+      "id": 5,
+      "name": "Theater"
+    },
     "startDate": "2025-07-06T18:00:00Z",
     "endDate": "2025-07-06T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/105/600/300",
@@ -70,10 +85,13 @@
     }
   },
   {
-    "id": "6",
+    "id": 6,
     "title": "City Marathon 10K",
     "description": "City Marathon 10K - A special event you shouldn't miss.",
-    "category": "Sports",
+    "category": {
+      "id": 6,
+      "name": "Sports"
+    },
     "startDate": "2025-07-07T18:00:00Z",
     "endDate": "2025-07-07T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/106/600/300",
@@ -84,10 +102,13 @@
     }
   },
   {
-    "id": "7",
+    "id": 7,
     "title": "Photography Workshop",
     "description": "Photography Workshop - A special event you shouldn't miss.",
-    "category": "Education",
+    "category": {
+      "id": 7,
+      "name": "Education"
+    },
     "startDate": "2025-07-08T18:00:00Z",
     "endDate": "2025-07-08T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/107/600/300",
@@ -98,10 +119,13 @@
     }
   },
   {
-    "id": "8",
+    "id": 8,
     "title": "Wine & Cheese Tasting Night",
     "description": "Wine & Cheese Tasting Night - A special event you shouldn't miss.",
-    "category": "Food & Drink",
+    "category": {
+      "id": 4,
+      "name": "Food & Drink"
+    },
     "startDate": "2025-07-09T18:00:00Z",
     "endDate": "2025-07-09T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/108/600/300",
@@ -112,10 +136,13 @@
     }
   },
   {
-    "id": "9",
+    "id": 9,
     "title": "Stand-Up Comedy Night",
     "description": "Stand-Up Comedy Night - A special event you shouldn't miss.",
-    "category": "Comedy",
+    "category": {
+      "id": 8,
+      "name": "Comedy"
+    },
     "startDate": "2025-07-10T18:00:00Z",
     "endDate": "2025-07-10T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/109/600/300",
@@ -126,10 +153,13 @@
     }
   },
   {
-    "id": "10",
+    "id": 10,
     "title": "Street Food Festival",
     "description": "Street Food Festival - A special event you shouldn't miss.",
-    "category": "Food & Drink",
+    "category": {
+      "id": 4,
+      "name": "Food & Drink"
+    },
     "startDate": "2025-07-11T18:00:00Z",
     "endDate": "2025-07-11T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/110/600/300",
@@ -140,10 +170,13 @@
     }
   },
   {
-    "id": "11",
+    "id": 11,
     "title": "Classical Orchestra Evening",
     "description": "Classical Orchestra Evening - A special event you shouldn't miss.",
-    "category": "Music",
+    "category": {
+      "id": 2,
+      "name": "Music"
+    },
     "startDate": "2025-07-12T18:00:00Z",
     "endDate": "2025-07-12T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/111/600/300",
@@ -154,10 +187,13 @@
     }
   },
   {
-    "id": "12",
+    "id": 12,
     "title": "AI & Machine Learning Conference",
     "description": "AI & Machine Learning Conference - A special event you shouldn't miss.",
-    "category": "Technology",
+    "category": {
+      "id": 3,
+      "name": "Technology"
+    },
     "startDate": "2025-07-13T18:00:00Z",
     "endDate": "2025-07-13T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/112/600/300",
@@ -168,10 +204,13 @@
     }
   },
   {
-    "id": "13",
+    "id": 13,
     "title": "Charity Fun Run",
     "description": "Charity Fun Run - A special event you shouldn't miss.",
-    "category": "Sports",
+    "category": {
+      "id": 6,
+      "name": "Sports"
+    },
     "startDate": "2025-07-14T18:00:00Z",
     "endDate": "2025-07-14T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/113/600/300",
@@ -182,10 +221,13 @@
     }
   },
   {
-    "id": "14",
+    "id": 14,
     "title": "Salsa Dance Night",
     "description": "Salsa Dance Night - A special event you shouldn't miss.",
-    "category": "Dance",
+    "category": {
+      "id": 9,
+      "name": "Dance"
+    },
     "startDate": "2025-07-15T18:00:00Z",
     "endDate": "2025-07-15T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/114/600/300",
@@ -196,10 +238,13 @@
     }
   },
   {
-    "id": "15",
+    "id": 15,
     "title": "Indie Film Screening",
     "description": "Indie Film Screening - A special event you shouldn't miss.",
-    "category": "Film",
+    "category": {
+      "id": 10,
+      "name": "Film"
+    },
     "startDate": "2025-07-16T18:00:00Z",
     "endDate": "2025-07-16T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/115/600/300",
@@ -210,10 +255,13 @@
     }
   },
   {
-    "id": "16",
+    "id": 16,
     "title": "Baking Masterclass",
     "description": "Baking Masterclass - A special event you shouldn't miss.",
-    "category": "Education",
+    "category": {
+      "id": 7,
+      "name": "Education"
+    },
     "startDate": "2025-07-17T18:00:00Z",
     "endDate": "2025-07-17T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/116/600/300",
@@ -224,10 +272,13 @@
     }
   },
   {
-    "id": "17",
+    "id": 17,
     "title": "Rock Concert Live",
     "description": "Rock Concert Live - A special event you shouldn't miss.",
-    "category": "Music",
+    "category": {
+      "id": 2,
+      "name": "Music"
+    },
     "startDate": "2025-07-18T18:00:00Z",
     "endDate": "2025-07-18T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/117/600/300",
@@ -238,10 +289,13 @@
     }
   },
   {
-    "id": "18",
+    "id": 18,
     "title": "Cycling Tour City",
     "description": "Cycling Tour City - A special event you shouldn't miss.",
-    "category": "Sports",
+    "category": {
+      "id": 6,
+      "name": "Sports"
+    },
     "startDate": "2025-07-19T18:00:00Z",
     "endDate": "2025-07-19T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/118/600/300",
@@ -252,10 +306,13 @@
     }
   },
   {
-    "id": "19",
+    "id": 19,
     "title": "Painting Workshop",
     "description": "Painting Workshop - A special event you shouldn't miss.",
-    "category": "Arts",
+    "category": {
+      "id": 11,
+      "name": "Arts"
+    },
     "startDate": "2025-07-20T18:00:00Z",
     "endDate": "2025-07-20T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/119/600/300",
@@ -266,10 +323,13 @@
     }
   },
   {
-    "id": "20",
+    "id": 20,
     "title": "Craft Beer Festival",
     "description": "Craft Beer Festival - A special event you shouldn't miss.",
-    "category": "Food & Drink",
+    "category": {
+      "id": 4,
+      "name": "Food & Drink"
+    },
     "startDate": "2025-07-21T18:00:00Z",
     "endDate": "2025-07-21T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/120/600/300",
@@ -280,10 +340,13 @@
     }
   },
   {
-    "id": "21",
+    "id": 21,
     "title": "Hip Hop Battle",
     "description": "Hip Hop Battle - A special event you shouldn't miss.",
-    "category": "Dance",
+    "category": {
+      "id": 9,
+      "name": "Dance"
+    },
     "startDate": "2025-07-22T18:00:00Z",
     "endDate": "2025-07-22T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/121/600/300",
@@ -294,10 +357,13 @@
     }
   },
   {
-    "id": "22",
+    "id": 22,
     "title": "Science Fair",
     "description": "Science Fair - A special event you shouldn't miss.",
-    "category": "Education",
+    "category": {
+      "id": 7,
+      "name": "Education"
+    },
     "startDate": "2025-07-23T18:00:00Z",
     "endDate": "2025-07-23T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/122/600/300",
@@ -308,10 +374,13 @@
     }
   },
   {
-    "id": "23",
+    "id": 23,
     "title": "Food Truck Fiesta",
     "description": "Food Truck Fiesta - A special event you shouldn't miss.",
-    "category": "Food & Drink",
+    "category": {
+      "id": 4,
+      "name": "Food & Drink"
+    },
     "startDate": "2025-07-24T18:00:00Z",
     "endDate": "2025-07-24T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/123/600/300",
@@ -322,10 +391,13 @@
     }
   },
   {
-    "id": "24",
+    "id": 24,
     "title": "Stand-Up Open Mic",
     "description": "Stand-Up Open Mic - A special event you shouldn't miss.",
-    "category": "Comedy",
+    "category": {
+      "id": 8,
+      "name": "Comedy"
+    },
     "startDate": "2025-07-25T18:00:00Z",
     "endDate": "2025-07-25T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/124/600/300",
@@ -336,10 +408,13 @@
     }
   },
   {
-    "id": "25",
+    "id": 25,
     "title": "Digital Art Exhibition",
     "description": "Digital Art Exhibition - A special event you shouldn't miss.",
-    "category": "Arts",
+    "category": {
+      "id": 11,
+      "name": "Arts"
+    },
     "startDate": "2025-07-26T18:00:00Z",
     "endDate": "2025-07-26T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/125/600/300",
@@ -350,10 +425,13 @@
     }
   },
   {
-    "id": "26",
+    "id": 26,
     "title": "Startup Hackathon",
     "description": "Startup Hackathon - A special event you shouldn't miss.",
-    "category": "Technology",
+    "category": {
+      "id": 3,
+      "name": "Technology"
+    },
     "startDate": "2025-07-27T18:00:00Z",
     "endDate": "2025-07-27T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/126/600/300",
@@ -364,10 +442,13 @@
     }
   },
   {
-    "id": "27",
+    "id": 27,
     "title": "Marathon Relay",
     "description": "Marathon Relay - A special event you shouldn't miss.",
-    "category": "Sports",
+    "category": {
+      "id": 6,
+      "name": "Sports"
+    },
     "startDate": "2025-07-28T18:00:00Z",
     "endDate": "2025-07-28T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/127/600/300",
@@ -378,10 +459,13 @@
     }
   },
   {
-    "id": "28",
+    "id": 28,
     "title": "Opera Night",
     "description": "Opera Night - A special event you shouldn't miss.",
-    "category": "Theater",
+    "category": {
+      "id": 5,
+      "name": "Theater"
+    },
     "startDate": "2025-07-29T18:00:00Z",
     "endDate": "2025-07-29T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/128/600/300",
@@ -392,10 +476,13 @@
     }
   },
   {
-    "id": "29",
+    "id": 29,
     "title": "Board Games Meetup",
     "description": "Board Games Meetup - A special event you shouldn't miss.",
-    "category": "Leisure",
+    "category": {
+      "id": 12,
+      "name": "Leisure"
+    },
     "startDate": "2025-07-30T18:00:00Z",
     "endDate": "2025-07-30T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/129/600/300",
@@ -406,10 +493,13 @@
     }
   },
   {
-    "id": "30",
+    "id": 30,
     "title": "Photography Exhibition",
     "description": "Photography Exhibition - A special event you shouldn't miss.",
-    "category": "Arts",
+    "category": {
+      "id": 11,
+      "name": "Arts"
+    },
     "startDate": "2025-07-31T18:00:00Z",
     "endDate": "2025-07-31T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/130/600/300",
@@ -420,10 +510,13 @@
     }
   },
   {
-    "id": "31",
+    "id": 31,
     "title": "Poetry Slam",
     "description": "Poetry Slam - A special event you shouldn't miss.",
-    "category": "Literature",
+    "category": {
+      "id": 13,
+      "name": "Literature"
+    },
     "startDate": "2025-08-01T18:00:00Z",
     "endDate": "2025-08-01T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/131/600/300",
@@ -434,10 +527,13 @@
     }
   },
   {
-    "id": "32",
+    "id": 32,
     "title": "Street Parade",
     "description": "Street Parade - A special event you shouldn't miss.",
-    "category": "Culture",
+    "category": {
+      "id": 14,
+      "name": "Culture"
+    },
     "startDate": "2025-08-02T18:00:00Z",
     "endDate": "2025-08-02T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/132/600/300",
@@ -448,10 +544,13 @@
     }
   },
   {
-    "id": "33",
+    "id": 33,
     "title": "Live Podcast Recording",
     "description": "Live Podcast Recording - A special event you shouldn't miss.",
-    "category": "Media",
+    "category": {
+      "id": 15,
+      "name": "Media"
+    },
     "startDate": "2025-08-03T18:00:00Z",
     "endDate": "2025-08-03T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/133/600/300",
@@ -462,10 +561,13 @@
     }
   },
   {
-    "id": "34",
+    "id": 34,
     "title": "Cooking with Chefs",
     "description": "Cooking with Chefs - A special event you shouldn't miss.",
-    "category": "Food & Drink",
+    "category": {
+      "id": 4,
+      "name": "Food & Drink"
+    },
     "startDate": "2025-08-04T18:00:00Z",
     "endDate": "2025-08-04T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/134/600/300",
@@ -476,10 +578,13 @@
     }
   },
   {
-    "id": "35",
+    "id": 35,
     "title": "VR Experience Expo",
     "description": "VR Experience Expo - A special event you shouldn't miss.",
-    "category": "Technology",
+    "category": {
+      "id": 3,
+      "name": "Technology"
+    },
     "startDate": "2025-08-05T18:00:00Z",
     "endDate": "2025-08-05T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/135/600/300",
@@ -490,10 +595,13 @@
     }
   },
   {
-    "id": "36",
+    "id": 36,
     "title": "Charity Gala Dinner",
     "description": "Charity Gala Dinner - A special event you shouldn't miss.",
-    "category": "Charity",
+    "category": {
+      "id": 16,
+      "name": "Charity"
+    },
     "startDate": "2025-08-06T18:00:00Z",
     "endDate": "2025-08-06T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/136/600/300",
@@ -504,10 +612,13 @@
     }
   },
   {
-    "id": "37",
+    "id": 37,
     "title": "Wellness Retreat",
     "description": "Wellness Retreat - A special event you shouldn't miss.",
-    "category": "Health & Wellness",
+    "category": {
+      "id": 1,
+      "name": "Health & Wellness"
+    },
     "startDate": "2025-08-07T18:00:00Z",
     "endDate": "2025-08-07T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/137/600/300",
@@ -518,10 +629,13 @@
     }
   },
   {
-    "id": "38",
+    "id": 38,
     "title": "Outdoor Cinema Night",
     "description": "Outdoor Cinema Night - A special event you shouldn't miss.",
-    "category": "Film",
+    "category": {
+      "id": 10,
+      "name": "Film"
+    },
     "startDate": "2025-08-08T18:00:00Z",
     "endDate": "2025-08-08T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/138/600/300",
@@ -532,10 +646,13 @@
     }
   },
   {
-    "id": "39",
+    "id": 39,
     "title": "Electronic Music Festival",
     "description": "Electronic Music Festival - A special event you shouldn't miss.",
-    "category": "Music",
+    "category": {
+      "id": 2,
+      "name": "Music"
+    },
     "startDate": "2025-08-09T18:00:00Z",
     "endDate": "2025-08-09T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/139/600/300",
@@ -546,10 +663,13 @@
     }
   },
   {
-    "id": "40",
+    "id": 40,
     "title": "Kayaking Adventure",
     "description": "Kayaking Adventure - A special event you shouldn't miss.",
-    "category": "Sports",
+    "category": {
+      "id": 6,
+      "name": "Sports"
+    },
     "startDate": "2025-08-10T18:00:00Z",
     "endDate": "2025-08-10T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/140/600/300",
@@ -560,10 +680,13 @@
     }
   },
   {
-    "id": "41",
+    "id": 41,
     "title": "Book Fair",
     "description": "Book Fair - A special event you shouldn't miss.",
-    "category": "Literature",
+    "category": {
+      "id": 13,
+      "name": "Literature"
+    },
     "startDate": "2025-08-11T18:00:00Z",
     "endDate": "2025-08-11T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/141/600/300",
@@ -574,10 +697,13 @@
     }
   },
   {
-    "id": "42",
+    "id": 42,
     "title": "Coding Bootcamp Weekend",
     "description": "Coding Bootcamp Weekend - A special event you shouldn't miss.",
-    "category": "Education",
+    "category": {
+      "id": 7,
+      "name": "Education"
+    },
     "startDate": "2025-08-12T18:00:00Z",
     "endDate": "2025-08-12T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/142/600/300",
@@ -588,10 +714,13 @@
     }
   },
   {
-    "id": "43",
+    "id": 43,
     "title": "Modern Dance Show",
     "description": "Modern Dance Show - A special event you shouldn't miss.",
-    "category": "Dance",
+    "category": {
+      "id": 9,
+      "name": "Dance"
+    },
     "startDate": "2025-08-13T18:00:00Z",
     "endDate": "2025-08-13T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/143/600/300",
@@ -602,10 +731,13 @@
     }
   },
   {
-    "id": "44",
+    "id": 44,
     "title": "Crafts & Makers Fair",
     "description": "Crafts & Makers Fair - A special event you shouldn't miss.",
-    "category": "Arts",
+    "category": {
+      "id": 11,
+      "name": "Arts"
+    },
     "startDate": "2025-08-14T18:00:00Z",
     "endDate": "2025-08-14T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/144/600/300",
@@ -616,10 +748,13 @@
     }
   },
   {
-    "id": "45",
+    "id": 45,
     "title": "Cultural Exchange Night",
     "description": "Cultural Exchange Night - A special event you shouldn't miss.",
-    "category": "Culture",
+    "category": {
+      "id": 14,
+      "name": "Culture"
+    },
     "startDate": "2025-08-15T18:00:00Z",
     "endDate": "2025-08-15T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/145/600/300",
@@ -630,10 +765,13 @@
     }
   },
   {
-    "id": "46",
+    "id": 46,
     "title": "Gaming Tournament",
     "description": "Gaming Tournament - A special event you shouldn't miss.",
-    "category": "Technology",
+    "category": {
+      "id": 3,
+      "name": "Technology"
+    },
     "startDate": "2025-08-16T18:00:00Z",
     "endDate": "2025-08-16T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/146/600/300",
@@ -644,10 +782,13 @@
     }
   },
   {
-    "id": "47",
+    "id": 47,
     "title": "Street Art Festival",
     "description": "Street Art Festival - A special event you shouldn't miss.",
-    "category": "Arts",
+    "category": {
+      "id": 11,
+      "name": "Arts"
+    },
     "startDate": "2025-08-17T18:00:00Z",
     "endDate": "2025-08-17T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/147/600/300",
@@ -658,10 +799,13 @@
     }
   },
   {
-    "id": "48",
+    "id": 48,
     "title": "Wine Harvest Celebration",
     "description": "Wine Harvest Celebration - A special event you shouldn't miss.",
-    "category": "Food & Drink",
+    "category": {
+      "id": 4,
+      "name": "Food & Drink"
+    },
     "startDate": "2025-08-18T18:00:00Z",
     "endDate": "2025-08-18T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/148/600/300",
@@ -672,10 +816,13 @@
     }
   },
   {
-    "id": "49",
+    "id": 49,
     "title": "Mindfulness Workshop",
     "description": "Mindfulness Workshop - A special event you shouldn't miss.",
-    "category": "Health & Wellness",
+    "category": {
+      "id": 1,
+      "name": "Health & Wellness"
+    },
     "startDate": "2025-08-19T18:00:00Z",
     "endDate": "2025-08-19T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/149/600/300",
@@ -686,10 +833,13 @@
     }
   },
   {
-    "id": "50",
+    "id": 50,
     "title": "Community BBQ",
     "description": "Community BBQ - A special event you shouldn't miss.",
-    "category": "Food & Drink",
+    "category": {
+      "id": 4,
+      "name": "Food & Drink"
+    },
     "startDate": "2025-08-20T18:00:00Z",
     "endDate": "2025-08-20T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/150/600/300",
@@ -700,10 +850,13 @@
     }
   },
   {
-    "id": "51",
+    "id": 51,
     "title": "New Year Fireworks",
     "description": "New Year Fireworks - A special event you shouldn't miss.",
-    "category": "Culture",
+    "category": {
+      "id": 14,
+      "name": "Culture"
+    },
     "startDate": "2025-08-21T18:00:00Z",
     "endDate": "2025-08-21T20:00:00Z",
     "imageUrl": "https://picsum.photos/id/151/600/300",

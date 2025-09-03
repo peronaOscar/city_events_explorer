@@ -1,3 +1,4 @@
+import 'package:city_events_explorer/src/data/datasources/events_json_manager.dart';
 import 'package:flutter/material.dart';
 
 class EventExplorerApp extends StatelessWidget {
@@ -7,16 +8,9 @@ class EventExplorerApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'City Events Explorer',
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Colors.blue,
-      ),
-      home: const Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-          child: Text("TO DO"),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
+      home: Scaffold(),
     );
   }
 }
