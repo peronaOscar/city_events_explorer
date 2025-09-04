@@ -1,9 +1,13 @@
 import 'package:city_events_explorer/src/config/theme/colors.dart';
-import 'package:city_events_explorer/src/data/models/category_model.dart';
-import 'package:city_events_explorer/src/data/models/event_model.dart';
-import 'package:city_events_explorer/src/data/models/location_model.dart';
+import 'package:city_events_explorer/src/domain/entities/event.dart';
+import 'package:city_events_explorer/src/presentation/blocs/events/events_bloc.dart';
+import 'package:city_events_explorer/src/presentation/blocs/events/events_events.dart';
+import 'package:city_events_explorer/src/presentation/blocs/events/events_state.dart';
+import 'package:city_events_explorer/src/presentation/blocs/filters/filters_bloc.dart';
+import 'package:city_events_explorer/src/presentation/blocs/filters/filters_state.dart';
 import 'package:city_events_explorer/src/presentation/widgets/card/event_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class EventListPage extends StatefulWidget {
   const EventListPage({super.key});
@@ -14,51 +18,24 @@ class EventListPage extends StatefulWidget {
 
 class _EventListPageState extends State<EventListPage> {
   final ScrollController _scrollController = ScrollController();
-  List<EventModel> events = [];
-  bool isLoading = false;
-  int page = 0;
-  final int pageSize = 20;
+  int page = 1;
 
   @override
   void initState() {
     super.initState();
-    _loadMoreEvents();
+
     _scrollController.addListener(() {
-      if (_scrollController.position.pixels >=
-          _scrollController.position.maxScrollExtent - 200 &&
-          !isLoading) {
-        _loadMoreEvents();
+      if (_scrollController.position.pixels >= _scrollController.position.maxScrollExtent - 200) {
+
+        if(context.read<EventsBloc>().state is EventsLoadingPage == false){
+          page++;
+          if(context.read<FiltersBloc>().state is NoFiltered ){
+            context.read<EventsBloc>().add(FetchEvents(page));
+          }else{
+            context.read<EventsBloc>().add(EventsFiltered((context.read<FiltersBloc>().state as Filtered).selectedCategoryId, page));
+          }
+        }
       }
-    });
-  }
-
-  Future<void> _loadMoreEvents() async {
-    setState(() => isLoading = true);
-
-    await Future.delayed(const Duration(seconds: 1));
-
-    List<EventModel> newEvents = List.generate(
-      pageSize,
-          (index) => EventModel(
-            id: 99,
-            category: EventCategoryModel(id: 1, name: "Example"),
-            description: "Community BBQ - A special event you shouldn't miss.",
-            endDate: "2025-08-20T18:00:00Z",
-            startDate: "2025-08-20T20:00:00Z",
-            imageUrl: "https://picsum.photos/500",
-            title: "Lorem impsum",
-            location: LocationModel(
-              name: "Central Park Great Lawn",
-              lat: 40.7828647,
-              lng: -73.9653551
-            )
-          ),
-    );
-
-    setState(() {
-      events.addAll(newEvents);
-      page++;
-      isLoading = false;
     });
   }
 
@@ -72,19 +49,44 @@ class _EventListPageState extends State<EventListPage> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: ListView.builder(
-        shrinkWrap: true,
-        controller: _scrollController,
-        itemCount: events.length + (isLoading ? 1 : 0),
-        itemBuilder: (context, index) {
-          if (index < events.length) {
-            return EventCard(event: events[index],);
-          } else {
-            return const Padding(
-              padding: EdgeInsets.all(16),
-              child: Center(child: CircularProgressIndicator(color: AppColors.primaryDark,)),
-            );
+      child: BlocBuilder<EventsBloc, EventsState>(
+        builder: (context, state) {
+
+          List<Event> events = [];
+
+          if (state is EventsInitial) {
+            return const Center(child: CircularProgressIndicator(color: AppColors.primaryDark));
+          } else if (state is EventsLoading) {
+            return const Center(child: CircularProgressIndicator(color: AppColors.primaryDark));
+          } else if (state is EventsError) {
+            return Center(child: Text(state.message));
+          } else if(state is EventsLoaded){
+            events = (state).events;
+          }else if(state is EventsLoadingPage){
+            events = (state).events;
           }
+
+          return ListView.builder(
+            shrinkWrap: true,
+            controller: _scrollController,
+            itemCount: events.length + 1 ,
+            itemBuilder: (context, index) {
+              if (index < events.length) {
+                return EventCard(event: events[index]);
+              } else {
+                if(state is EventsLoadingPage){
+                  return const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Center(
+                      child: CircularProgressIndicator(color: AppColors.primaryDark),
+                    ),
+                  );
+                }else {
+                  return Container();
+                }
+              }
+            },
+          );
         },
       ),
     );

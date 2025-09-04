@@ -2,13 +2,14 @@ import 'package:city_events_explorer/src/config/routes/navigator_routes.dart';
 import 'package:city_events_explorer/src/config/theme/app_theme.dart';
 import 'package:city_events_explorer/src/config/theme/colors.dart';
 import 'package:city_events_explorer/src/data/models/event_model.dart';
+import 'package:city_events_explorer/src/domain/entities/event.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class EventCard extends StatelessWidget {
   const EventCard({super.key, required this.event});
 
-  final EventModel event;
+  final Event event;
 
   @override
   Widget build(BuildContext context) {

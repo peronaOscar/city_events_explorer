@@ -1,6 +1,16 @@
-import 'package:city_events_explorer/src/config/theme/app_theme.dart';
 import 'package:city_events_explorer/src/config/theme/colors.dart';
+import 'package:city_events_explorer/src/domain/entities/category.dart';
+import 'package:city_events_explorer/src/presentation/blocs/categories/categories_bloc.dart';
+import 'package:city_events_explorer/src/presentation/blocs/categories/categories_events.dart';
+import 'package:city_events_explorer/src/presentation/blocs/categories/categories_state.dart';
+import 'package:city_events_explorer/src/presentation/blocs/events/events_bloc.dart';
+import 'package:city_events_explorer/src/presentation/blocs/events/events_events.dart';
+import 'package:city_events_explorer/src/presentation/blocs/filters/filters_bloc.dart';
+import 'package:city_events_explorer/src/presentation/blocs/filters/filters_events.dart';
+import 'package:city_events_explorer/src/presentation/screens/home/widgets/selected_category_card.dart';
+import 'package:city_events_explorer/src/presentation/screens/home/widgets/unselected_category_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeHeader extends StatefulWidget {
   const HomeHeader({super.key});
@@ -35,7 +45,7 @@ class _HomeHeaderState extends State<HomeHeader> {
               left: 16,
               right: 16,
               bottom: 0,
-              height: 50,
+              height: 52,
               child: _categoryList()
           ),
         ],
@@ -76,32 +86,53 @@ class _HomeHeaderState extends State<HomeHeader> {
     );
   }
 
-  Widget _categoryList(){
+  Widget _categoryList() {
+    return BlocBuilder<CategoriesBloc, CategoriesState>(
+      builder: (context, state) {
+        if (state is CategoriesLoaded) {
+          final categories = state.items;
+          final selectedId = state.selectedCategoryId;
 
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: 10,
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (BuildContext context, int index){
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-          child: Container(
-            height: 50,
-            decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15)),
-                color: AppColors.onSurface
+          return ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(15)),
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: categories.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (BuildContext context, int index) {
+                final category = categories[index];
+                final isSelected = selectedId == category.id;
+
+                if (isSelected) {
+                  return SelectedCategoryCard(
+                    category: category,
+                    onTap: () {
+                      _filterList(category);
+                    },
+                  );
+                } else {
+                  return UnselectedCategoryCard(
+                    category: category,
+                    onTap: () {
+                      _filterList(category);
+                    },
+                  );
+                }
+              },
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                "Lorem ipsum",
-                textAlign: TextAlign.center,
-                style: AppTheme.textTheme.labelLarge?.copyWith(color: AppColors.surface),
-              ),
-            ),
-          ),
-        );
-      }
+          );
+        }else{
+          return Container();
+        }
+
+      },
     );
   }
+
+  void _filterList(EventCategory category){
+    context.read<CategoriesBloc>().add(CategorySelected(category.id));
+    context.read<EventsBloc>().add(EventsFiltered(category.id, 1));
+    context.read<FiltersBloc>().add(CreateFilters(selectedCategoryId: category.id));
+  }
+
 }

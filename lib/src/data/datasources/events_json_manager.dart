@@ -19,6 +19,9 @@ class EventsJsonManager {
 
   /// Obtener eventos por página (10 eventos por página)
   Future<List<Map<String, dynamic>>> getEvents({int page = 1}) async {
+    await Future.delayed(
+      const Duration(seconds: 1),
+    ); //Simula tiempo de espera de la petición
     final events = await _loadEvents();
     final startIndex = (page - 1) * pageSize;
     final endIndex = startIndex + pageSize;
@@ -43,9 +46,27 @@ class EventsJsonManager {
 
   /// Obtener todos los eventos de una categoría
   Future<List<Map<String, dynamic>>> getEventsByCategory(int categoryId) async {
-  final events = await _loadEvents();
-    return events
-        .where((e) => e['category']['id'] == categoryId)
-        .toList();
+    await Future.delayed(const Duration(seconds: 1),); //Simula tiempo de espera de la petición
+    final events = await _loadEvents();
+    return events.where((e) => e['category']['id'] == categoryId).toList();
+  }
+
+  /// Obtener todas las categorías
+  Future<List<Map<String, dynamic>>> getCategories() async {
+    final events = await _loadEvents();
+
+    final seenIds = <int>{};
+    final categories = <Map<String, dynamic>>[];
+
+    for (final e in events) {
+      final category = e['category'] as Map<String, dynamic>;
+      final id = category['id'] as int;
+
+      if (seenIds.add(id)) {
+        categories.add(category);
+      }
+    }
+
+    return categories;
   }
 }
