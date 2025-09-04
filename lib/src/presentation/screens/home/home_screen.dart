@@ -1,3 +1,4 @@
+import 'package:city_events_explorer/src/config/routes/navigator_routes.dart';
 import 'package:city_events_explorer/src/config/theme/colors.dart';
 import 'package:city_events_explorer/src/presentation/blocs/events/events_bloc.dart';
 import 'package:city_events_explorer/src/presentation/blocs/events/events_events.dart';
@@ -22,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("City Events Explorer"),
         actions: [
+          IconButton(onPressed: ()=> Navigator.pushNamed(context, NavigatorRoutes.favorites), icon: const Icon(Icons.favorite, color: AppColors.surface,)),
           IconButton(
               onPressed: () {
                 context.read<FiltersBloc>().add(DeleteFilters());
