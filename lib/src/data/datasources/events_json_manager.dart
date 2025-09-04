@@ -75,7 +75,25 @@ class EventsJsonManager {
       }).toList();
     }
 
-    return events;
+    if (searchValue != null && searchValue.isNotEmpty) {
+      final query = searchValue.toLowerCase();
+      events = events.where((e) {
+        final title = (e['title'] as String).toLowerCase();
+        return title.contains(query);
+      }).toList();
+    }
+
+    const pageSize = 10;
+    final startIndex = (page - 1) * pageSize;
+    final endIndex = startIndex + pageSize;
+
+    if (startIndex >= events.length) return [];
+
+    return events.sublist(
+      startIndex,
+      endIndex > events.length ? events.length : endIndex,
+    );
+
   }
 
   /// Obtener todas las categorías

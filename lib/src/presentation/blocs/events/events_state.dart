@@ -16,8 +16,10 @@ class EventsLoadingPage extends EventsState {
 
   const EventsLoadingPage({
     required this.events,
+    this.hasMore = true
   });
   final List<Event> events;
+  final bool hasMore;
 
   EventsLoadingPage copyWith({
     List<Event>? items,
@@ -33,8 +35,10 @@ class EventsLoaded extends EventsState {
 
   const EventsLoaded({
     required this.events,
+    this.hasMore = true
   });
   final List<Event> events;
+  final bool hasMore;
 
   EventsLoaded copyWith({
     List<Event>? items,

@@ -126,8 +126,8 @@
       "id": 4,
       "name": "Food & Drink"
     },
-    "startDate": "2025-07-09T18:00:00Z",
-    "endDate": "2025-07-09T20:00:00Z",
+    "startDate": "2025-09-09T18:00:00Z",
+    "endDate": "2025-09-09T20:00:00Z",
     "imageUrl": "https://picsum.photos/500",
     "location": {
       "name": "Comedy Cellar",
@@ -194,8 +194,8 @@
       "id": 3,
       "name": "Technology"
     },
-    "startDate": "2025-07-13T18:00:00Z",
-    "endDate": "2025-07-13T20:00:00Z",
+    "startDate": "2025-09-13T18:00:00Z",
+    "endDate": "2025-09-13T20:00:00Z",
     "imageUrl": "https://picsum.photos/500",
     "location": {
       "name": "Prospect Park",
@@ -262,8 +262,8 @@
       "id": 7,
       "name": "Education"
     },
-    "startDate": "2025-07-17T18:00:00Z",
-    "endDate": "2025-07-17T20:00:00Z",
+    "startDate": "2025-09-17T18:00:00Z",
+    "endDate": "2025-09-17T20:00:00Z",
     "imageUrl": "https://picsum.photos/500",
     "location": {
       "name": "Madison Square Garden",
@@ -330,8 +330,8 @@
       "id": 4,
       "name": "Food & Drink"
     },
-    "startDate": "2025-07-21T18:00:00Z",
-    "endDate": "2025-07-21T20:00:00Z",
+    "startDate": "2025-09-21T18:00:00Z",
+    "endDate": "2025-09-21T20:00:00Z",
     "imageUrl": "https://picsum.photos/500",
     "location": {
       "name": "Apollo Theater",
@@ -347,8 +347,8 @@
       "id": 9,
       "name": "Dance"
     },
-    "startDate": "2025-07-22T18:00:00Z",
-    "endDate": "2025-07-22T20:00:00Z",
+    "startDate": "2025-09-22T18:00:00Z",
+    "endDate": "2025-09-22T20:00:00Z",
     "imageUrl": "https://picsum.photos/500",
     "location": {
       "name": "NY Hall of Science",

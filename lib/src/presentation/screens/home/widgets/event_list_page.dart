@@ -25,8 +25,7 @@ class _EventListPageState extends State<EventListPage> {
     super.initState();
 
     _scrollController.addListener(() {
-      if (_scrollController.position.pixels >=
-          _scrollController.position.maxScrollExtent - 100) {
+      if (_scrollController.position.pixels >= _scrollController.position.maxScrollExtent - 100) {
         if (context.read<EventsBloc>().state is EventsLoadingPage == false) {
           page++;
           if (context.read<FiltersBloc>().state is NoFiltered) {
@@ -62,6 +61,7 @@ class _EventListPageState extends State<EventListPage> {
       child: BlocBuilder<EventsBloc, EventsState>(
         builder: (context, state) {
           List<Event> events = [];
+          bool hasMore = false;
 
           if (state is EventsInitial) {
             return const Center(
@@ -74,15 +74,17 @@ class _EventListPageState extends State<EventListPage> {
           } else if (state is EventsError) {
             return Center(child: Text(state.message));
           } else if (state is EventsLoaded) {
-            events = (state).events;
+            events = state.events;
+            hasMore = state.hasMore;
           } else if (state is EventsLoadingPage) {
             events = (state).events;
+            hasMore = state.hasMore;
           }
 
           return ListView.builder(
             shrinkWrap: true,
             controller: _scrollController,
-            itemCount: events.length + 1,
+            itemCount: events.length + ((hasMore) ? 1 : 0),
             itemBuilder: (context, index) {
               if (index < events.length) {
                 return EventCard(event: events[index]);

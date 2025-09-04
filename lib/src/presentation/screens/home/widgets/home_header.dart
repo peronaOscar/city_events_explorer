@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:city_events_explorer/src/config/theme/colors.dart';
 import 'package:city_events_explorer/src/domain/entities/category.dart';
 import 'package:city_events_explorer/src/presentation/blocs/categories/categories_bloc.dart';
@@ -21,6 +23,16 @@ class HomeHeader extends StatefulWidget {
 }
 
 class _HomeHeaderState extends State<HomeHeader> {
+
+  final TextEditingController _searchController = TextEditingController();
+  Timer? _debounce;
+
+  @override
+  void dispose() {
+    _debounce?.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -58,19 +70,23 @@ class _HomeHeaderState extends State<HomeHeader> {
     return Row(
       children: [
         Expanded(
-          child: TextField(
-            decoration: InputDecoration(
-              hintText: "Search...",
-              filled: true,
-              fillColor: AppColors.surface,
-              isDense: true,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide.none,
+            child: TextField(
+              controller: _searchController,
+              decoration: InputDecoration(
+                hintText: "Search...",
+                filled: true,
+                fillColor: AppColors.surface,
+                isDense: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide.none,
+                ),
               ),
+              style: const TextStyle(fontSize: 14),
+              onChanged: (String value){
+                _onSearchChanged(value);
+              }
             ),
-            style: const TextStyle(fontSize: 14),
-          ),
         ),
         const SizedBox(width: 8),
         GestureDetector(
@@ -88,11 +104,13 @@ class _HomeHeaderState extends State<HomeHeader> {
   }
 
   Widget _categoryList() {
+    final filtersState = context.watch<FiltersBloc>().state;
+
     return BlocBuilder<CategoriesBloc, CategoriesState>(
       builder: (context, state) {
         if (state is CategoriesLoaded) {
           final categories = state.items;
-          final selectedId = state.selectedCategoryId;
+          final selectedId = filtersState is Filtered ? filtersState.selectedCategoryId : null;
 
           return ClipRRect(
             borderRadius: const BorderRadius.all(Radius.circular(15)),
@@ -107,9 +125,6 @@ class _HomeHeaderState extends State<HomeHeader> {
                 if (isSelected) {
                   return SelectedCategoryCard(
                     category: category,
-                    onTap: () {
-                      _filterList(category);
-                    },
                   );
                 } else {
                   return UnselectedCategoryCard(
@@ -134,7 +149,7 @@ class _HomeHeaderState extends State<HomeHeader> {
     context.read<CategoriesBloc>().add(CategorySelected(category.id));
     context.read<FiltersBloc>().add(CreateFilters(selectedCategoryId: category.id));
     await Future.delayed(Duration.zero);
-    var status = context.read<FiltersBloc>().state as Filtered;
+    final status = context.read<FiltersBloc>().state as Filtered;
     context.read<EventsBloc>().add(EventsFiltered(
       page: 1,
       categoryId: status.selectedCategoryId,
@@ -146,16 +161,45 @@ class _HomeHeaderState extends State<HomeHeader> {
 
   void _pickDateRanges()  {
     showDateRangePicker(context: context, firstDate: DateTime.now(), lastDate: DateTime.now().add(const Duration(days: 90))).then(
-        (range){
+        (range) async {
           if(range != null){
             context.read<FiltersBloc>().add(CreateFilters(
                 startDate: range.start.toString(),
                 endDate: range.end.toString(),
             ));
+            await Future.delayed(Duration.zero);
+            final status = context.read<FiltersBloc>().state as Filtered;
+            context.read<EventsBloc>().add(EventsFiltered(
+                page: 1,
+                categoryId: status.selectedCategoryId,
+                startDate: status.startDate,
+                endDate: status.endDate,
+                searchValue: status.searchValue
+            ));
           }
 
         }
     );
+  }
+
+  void _onSearchChanged(String value){
+    if (_debounce?.isActive ?? false) _debounce?.cancel();
+    _debounce = Timer(const Duration(seconds: 1), () async {
+
+      context.read<FiltersBloc>().add(CreateFilters(
+        searchValue: value
+      ));
+      await Future.delayed(Duration.zero);
+      final status = context.read<FiltersBloc>().state as Filtered;
+      context.read<EventsBloc>().add(EventsFiltered(
+          page: 1,
+          categoryId: status.selectedCategoryId,
+          startDate: status.startDate,
+          endDate: status.endDate,
+          searchValue: status.searchValue
+      ));
+
+    });
   }
 
 }
