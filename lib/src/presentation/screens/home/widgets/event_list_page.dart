@@ -25,14 +25,24 @@ class _EventListPageState extends State<EventListPage> {
     super.initState();
 
     _scrollController.addListener(() {
-      if (_scrollController.position.pixels >= _scrollController.position.maxScrollExtent - 200) {
-
-        if(context.read<EventsBloc>().state is EventsLoadingPage == false){
+      if (_scrollController.position.pixels >=
+          _scrollController.position.maxScrollExtent - 100) {
+        if (context.read<EventsBloc>().state is EventsLoadingPage == false) {
           page++;
-          if(context.read<FiltersBloc>().state is NoFiltered ){
+          if (context.read<FiltersBloc>().state is NoFiltered) {
             context.read<EventsBloc>().add(FetchEvents(page));
-          }else{
-            context.read<EventsBloc>().add(EventsFiltered((context.read<FiltersBloc>().state as Filtered).selectedCategoryId, page));
+          } else {
+            final Filtered filterStatus = (context.read<FiltersBloc>().state as Filtered);
+            context.read<EventsBloc>().add(
+              EventsFiltered(
+                page: page,
+                categoryId: filterStatus.selectedCategoryId,
+                startDate: filterStatus.startDate,
+                endDate: filterStatus.endDate,
+                searchValue: filterStatus.startDate,
+              ),
+            );
+
           }
         }
       }
@@ -51,37 +61,42 @@ class _EventListPageState extends State<EventListPage> {
       padding: const EdgeInsets.all(16.0),
       child: BlocBuilder<EventsBloc, EventsState>(
         builder: (context, state) {
-
           List<Event> events = [];
 
           if (state is EventsInitial) {
-            return const Center(child: CircularProgressIndicator(color: AppColors.primaryDark));
+            return const Center(
+              child: CircularProgressIndicator(color: AppColors.primaryDark),
+            );
           } else if (state is EventsLoading) {
-            return const Center(child: CircularProgressIndicator(color: AppColors.primaryDark));
+            return const Center(
+              child: CircularProgressIndicator(color: AppColors.primaryDark),
+            );
           } else if (state is EventsError) {
             return Center(child: Text(state.message));
-          } else if(state is EventsLoaded){
+          } else if (state is EventsLoaded) {
             events = (state).events;
-          }else if(state is EventsLoadingPage){
+          } else if (state is EventsLoadingPage) {
             events = (state).events;
           }
 
           return ListView.builder(
             shrinkWrap: true,
             controller: _scrollController,
-            itemCount: events.length + 1 ,
+            itemCount: events.length + 1,
             itemBuilder: (context, index) {
               if (index < events.length) {
                 return EventCard(event: events[index]);
               } else {
-                if(state is EventsLoadingPage){
+                if (state is EventsLoadingPage) {
                   return const Padding(
                     padding: EdgeInsets.all(16),
                     child: Center(
-                      child: CircularProgressIndicator(color: AppColors.primaryDark),
+                      child: CircularProgressIndicator(
+                        color: AppColors.primaryDark,
+                      ),
                     ),
                   );
-                }else {
+                } else {
                   return Container();
                 }
               }

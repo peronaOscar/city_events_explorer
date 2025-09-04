@@ -44,11 +44,38 @@ class EventsJsonManager {
     }
   }
 
-  /// Obtener todos los eventos de una categoría
-  Future<List<Map<String, dynamic>>> getEventsByCategory(int categoryId) async {
+  /// Obtener eventos segun los filtros
+  Future<List<Map<String, dynamic>>> getEventsByCategory({
+    int? categoryId,
+    String? startDate,
+    String? endDate,
+    String? searchValue,
+    required int page
+}) async {
+
     await Future.delayed(const Duration(seconds: 1),); //Simula tiempo de espera de la petición
-    final events = await _loadEvents();
-    return events.where((e) => e['category']['id'] == categoryId).toList();
+    var events = await _loadEvents();
+
+    if(categoryId != null){
+      events = events.where((e) => e['category']['id'] == categoryId).toList();
+    }
+
+    if (startDate != null || endDate != null) {
+      final start = startDate != null ? DateTime.parse(startDate) : null;
+      final end = endDate != null ? DateTime.parse(endDate) : null;
+
+      events = events.where((e) {
+        final eventStart = DateTime.parse(e['startDate']);
+        final eventEnd = DateTime.parse(e['endDate']);
+
+        final afterStart = start == null || eventStart.isAfter(start) || eventStart.isAtSameMomentAs(start);
+        final beforeEnd = end == null || eventEnd.isBefore(end) || eventEnd.isAtSameMomentAs(end);
+
+        return afterStart && beforeEnd;
+      }).toList();
+    }
+
+    return events;
   }
 
   /// Obtener todas las categorías

@@ -7,6 +7,7 @@ import 'package:city_events_explorer/src/presentation/blocs/events/events_bloc.d
 import 'package:city_events_explorer/src/presentation/blocs/events/events_events.dart';
 import 'package:city_events_explorer/src/presentation/blocs/filters/filters_bloc.dart';
 import 'package:city_events_explorer/src/presentation/blocs/filters/filters_events.dart';
+import 'package:city_events_explorer/src/presentation/blocs/filters/filters_state.dart';
 import 'package:city_events_explorer/src/presentation/screens/home/widgets/selected_category_card.dart';
 import 'package:city_events_explorer/src/presentation/screens/home/widgets/unselected_category_card.dart';
 import 'package:flutter/material.dart';
@@ -73,8 +74,8 @@ class _HomeHeaderState extends State<HomeHeader> {
         ),
         const SizedBox(width: 8),
         GestureDetector(
-          onTap: (){
-            showDatePicker(context: context, firstDate: DateTime.now(), lastDate: DateTime.now().add(Duration(days: 90)));
+          onTap: () {
+            _pickDateRanges();
           },
           child: const Icon(
             Icons.calendar_today,
@@ -129,10 +130,32 @@ class _HomeHeaderState extends State<HomeHeader> {
     );
   }
 
-  void _filterList(EventCategory category){
+  Future<void> _filterList(EventCategory category) async {
     context.read<CategoriesBloc>().add(CategorySelected(category.id));
-    context.read<EventsBloc>().add(EventsFiltered(category.id, 1));
     context.read<FiltersBloc>().add(CreateFilters(selectedCategoryId: category.id));
+    await Future.delayed(Duration.zero);
+    var status = context.read<FiltersBloc>().state as Filtered;
+    context.read<EventsBloc>().add(EventsFiltered(
+      page: 1,
+      categoryId: status.selectedCategoryId,
+      startDate: status.startDate,
+      endDate: status.endDate,
+      searchValue: status.searchValue
+    ));
+  }
+
+  void _pickDateRanges()  {
+    showDateRangePicker(context: context, firstDate: DateTime.now(), lastDate: DateTime.now().add(const Duration(days: 90))).then(
+        (range){
+          if(range != null){
+            context.read<FiltersBloc>().add(CreateFilters(
+                startDate: range.start.toString(),
+                endDate: range.end.toString(),
+            ));
+          }
+
+        }
+    );
   }
 
 }

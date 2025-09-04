@@ -18,6 +18,9 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
       Emitter<EventsState> emit,
       ) async {
     try {
+      if(event.page == 1){
+        events = [];
+      }
       emit(EventsLoadingPage(events: events));
       final newEvents = await repo.getEvents(page: event.page);
       events.addAll(newEvents);
@@ -38,7 +41,13 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
       emit(EventsLoadingPage(events: events));
     }
     try {
-      final events = await repo.getEventsByCategory(event.categoryId!);
+      final events = await repo.getEventsFiltered(
+        page: event.page,
+        categoryId: event.categoryId,
+        startDate: event.startDate,
+        endDate: event.endDate,
+        searchValue: event.searchValue
+      );
       emit(EventsLoaded(events: events));
     } catch (e) {
       emit(const EventsError("No se han podido cargar los eventos"));

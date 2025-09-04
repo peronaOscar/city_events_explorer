@@ -27,8 +27,20 @@ class EventRepositoryImpl implements EventRepository {
   }
 
   @override
-  Future<List<Event>> getEventsByCategory(int categoryId) async {
-    final rawEvents = await jsonManager.getEventsByCategory(categoryId);
+  Future<List<Event>> getEventsFiltered({
+    int? categoryId,
+    String? startDate,
+    String? endDate,
+    String? searchValue,
+    required int page
+}) async {
+    final rawEvents = await jsonManager.getEventsByCategory(
+      page: page,
+      searchValue: searchValue,
+      endDate: endDate,
+      startDate: startDate,
+      categoryId: categoryId
+    );
     final models = rawEvents.map((e) => EventModel.fromJson(e)).toList();
     return models.map((m) => m as Event).toList();
   }
