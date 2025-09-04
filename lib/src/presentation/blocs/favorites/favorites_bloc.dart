@@ -3,6 +3,8 @@ import 'package:city_events_explorer/src/presentation/blocs/favorites/favorites_
 import 'package:city_events_explorer/src/presentation/blocs/favorites/favorites_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+
+
 class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
 
   FavoritesBloc(this.db) : super(const FavoritesInitial()) {
@@ -30,6 +32,7 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
       Emitter<FavoritesState> emit,
       ) async {
     try {
+      emit(const FavoritesLoading());
       await db.addFavorite(event.event);
       final favorites = await db.getFavorites();
       emit(FavoritesLoaded(favorites));
@@ -43,6 +46,7 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
       Emitter<FavoritesState> emit,
       ) async {
     try {
+      emit(const FavoritesLoading());
       await db.removeFavorite(event.eventId);
       final favorites = await db.getFavorites();
       emit(FavoritesLoaded(favorites));
