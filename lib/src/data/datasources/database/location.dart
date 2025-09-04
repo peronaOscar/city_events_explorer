@@ -4,6 +4,12 @@ part 'location.g.dart';
 
 @HiveType(typeId: 2)
 class Location {
+
+  Location({
+    required this.name,
+    required this.lat,
+    required this.lng,
+  });
   @HiveField(0)
   final String name;
 
@@ -12,10 +18,4 @@ class Location {
 
   @HiveField(2)
   final double lng;
-
-  Location({
-    required this.name,
-    required this.lat,
-    required this.lng,
-  });
 }

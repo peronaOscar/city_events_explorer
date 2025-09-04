@@ -2,14 +2,6 @@ import 'package:city_events_explorer/src/domain/entities/category.dart';
 import 'package:city_events_explorer/src/domain/entities/location.dart';
 
 class Event {
-  int? id;
-  String? title;
-  String? description;
-  EventCategory? category;
-  String? startDate;
-  String? endDate;
-  String? imageUrl;
-  Location? location;
 
   Event(
       {this.id,
@@ -20,4 +12,12 @@ class Event {
         this.endDate,
         this.imageUrl,
         this.location});
+  int? id;
+  String? title;
+  String? description;
+  EventCategory? category;
+  String? startDate;
+  String? endDate;
+  String? imageUrl;
+  Location? location;
 }

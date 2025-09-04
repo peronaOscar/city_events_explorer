@@ -5,13 +5,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:city_events_explorer/src/domain/repositories/event_repository.dart';
 
 class EventsBloc extends Bloc<EventsEvent, EventsState> {
-  final EventRepository repo;
-  List<Event> events = [];
 
   EventsBloc(this.repo) : super(const EventsInitial()) {
     on<FetchEvents>(_onFetched);
     on<EventsFiltered>(_onFiltered);
   }
+  final EventRepository repo;
+  List<Event> events = [];
 
   Future<void> _onFetched(
       FetchEvents event,

@@ -2,13 +2,13 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 class EventsJsonManager {
-  final String path;
-  final int pageSize;
 
   EventsJsonManager({
     this.path = 'assets/data/events.json',
     this.pageSize = 10,
   });
+  final String path;
+  final int pageSize;
 
   /// Cargar el JSON de eventos desde assets
   Future<List<Map<String, dynamic>>> _loadEvents() async {

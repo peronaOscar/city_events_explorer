@@ -4,12 +4,12 @@ import 'package:city_events_explorer/src/domain/repositories/event_repository.da
 import 'package:city_events_explorer/src/presentation/blocs/categories/categories_state.dart';
 
 class CategoriesBloc extends Bloc<CategoriesEvent, CategoriesState> {
-  final EventRepository repo;
 
   CategoriesBloc(this.repo) : super(const CategoriesInitial()) {
     on<FetchCategories>(_onFetched);
     on<CategorySelected>(_onSelected);
   }
+  final EventRepository repo;
 
   Future<void> _onFetched(
     FetchCategories event,

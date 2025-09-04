@@ -1,6 +1,5 @@
 import 'package:city_events_explorer/src/config/theme/app_theme.dart';
 import 'package:city_events_explorer/src/config/theme/colors.dart';
-import 'package:city_events_explorer/src/data/models/event_model.dart';
 import 'package:city_events_explorer/src/domain/entities/event.dart';
 import 'package:city_events_explorer/src/presentation/blocs/favorites/favorites_bloc.dart';
 import 'package:city_events_explorer/src/presentation/blocs/favorites/favorites_events.dart';

@@ -4,7 +4,6 @@ import 'package:city_events_explorer/src/data/datasources/database/event_categor
 import 'package:city_events_explorer/src/data/datasources/database/location.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 
 void main() {

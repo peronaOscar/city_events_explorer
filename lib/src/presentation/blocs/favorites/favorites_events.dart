@@ -9,11 +9,11 @@ class LoadFavorites extends FavoritesEvent {
 }
 
 class AddFavorite extends FavoritesEvent {
-  final Event event;
   const AddFavorite(this.event);
+  final Event event;
 }
 
 class RemoveFavorite extends FavoritesEvent {
-  final int eventId;
   const RemoveFavorite(this.eventId);
+  final int eventId;
 }

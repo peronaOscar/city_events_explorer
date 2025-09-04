@@ -6,9 +6,9 @@ import 'package:city_events_explorer/src/data/models/event_model.dart';
 import 'package:city_events_explorer/src/data/datasources/events_json_manager.dart';
 
 class EventRepositoryImpl implements EventRepository {
-  final EventsJsonManager jsonManager;
 
   EventRepositoryImpl(this.jsonManager);
+  final EventsJsonManager jsonManager;
 
   @override
   Future<List<Event>> getEvents({int page = 1}) async {

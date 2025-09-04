@@ -15,7 +15,6 @@ class DetailMap extends StatefulWidget {
 
 class _DetailMapState extends State<DetailMap> {
   late final LatLng _eventPosition;
-  GoogleMapController? _mapController;
 
   @override
   void initState() {
@@ -28,7 +27,7 @@ class _DetailMapState extends State<DetailMap> {
     return SizedBox(
       height: 400,
       child: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(25)),
+        borderRadius: const BorderRadius.all(Radius.circular(25)),
         child: GoogleMap(
           initialCameraPosition: CameraPosition(
             target: _eventPosition,
@@ -41,9 +40,7 @@ class _DetailMapState extends State<DetailMap> {
               infoWindow: InfoWindow(title: widget.location.name),
             ),
           },
-          onMapCreated: (controller) {
-            _mapController = controller;
-          },
+          onMapCreated: (controller) {},
           gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>{
             Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
           },

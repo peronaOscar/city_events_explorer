@@ -29,9 +29,6 @@ class AppTheme {
         buttonColor: AppColors.primary,
         textTheme: ButtonTextTheme.primary,
       ),
-      inputDecorationTheme: InputDecorationTheme(
-
-      )
     );
   }
 

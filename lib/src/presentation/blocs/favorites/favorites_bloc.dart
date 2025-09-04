@@ -4,13 +4,13 @@ import 'package:city_events_explorer/src/presentation/blocs/favorites/favorites_
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
-  final FavoritesDbManager db;
 
-  FavoritesBloc(this.db) : super(FavoritesInitial()) {
+  FavoritesBloc(this.db) : super(const FavoritesInitial()) {
     on<LoadFavorites>(_onLoadFavorites);
     on<AddFavorite>(_onAddFavorite);
     on<RemoveFavorite>(_onRemoveFavorite);
   }
+  final FavoritesDbManager db;
 
   Future<void> _onLoadFavorites(
       LoadFavorites event,

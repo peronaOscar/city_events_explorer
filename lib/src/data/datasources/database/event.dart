@@ -1,11 +1,22 @@
 import 'package:hive/hive.dart';
-import 'event_category.dart';
-import 'location.dart';
+import 'package:city_events_explorer/src/data/datasources/database/event_category.dart';
+import 'package:city_events_explorer/src/data/datasources/database/location.dart';
 
 part 'event.g.dart';
 
 @HiveType(typeId: 3)
 class Event {
+
+  Event({
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.category,
+    required this.startDate,
+    required this.endDate,
+    required this.imageUrl,
+    required this.location,
+  });
   @HiveField(0)
   final int id;
 
@@ -29,15 +40,4 @@ class Event {
 
   @HiveField(7)
   final Location location;
-
-  Event({
-    required this.id,
-    required this.title,
-    required this.description,
-    required this.category,
-    required this.startDate,
-    required this.endDate,
-    required this.imageUrl,
-    required this.location,
-  });
 }

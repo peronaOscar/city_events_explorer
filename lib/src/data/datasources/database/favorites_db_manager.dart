@@ -1,6 +1,6 @@
-import 'package:city_events_explorer/src/data/datasources/database/event.dart' as HiveEvent;
-import 'package:city_events_explorer/src/data/datasources/database/event_category.dart' as HiveEventCategory;
-import 'package:city_events_explorer/src/data/datasources/database/location.dart' as HiveEventLocation;
+import 'package:city_events_explorer/src/data/datasources/database/event.dart' as hive_event;
+import 'package:city_events_explorer/src/data/datasources/database/event_category.dart' as hive_event_category;
+import 'package:city_events_explorer/src/data/datasources/database/location.dart' as hive_event_location;
 import 'package:city_events_explorer/src/domain/entities/category.dart';
 import 'package:city_events_explorer/src/domain/entities/event.dart';
 import 'package:city_events_explorer/src/domain/entities/location.dart';
@@ -9,8 +9,8 @@ import 'package:hive/hive.dart';
 class FavoritesDbManager {
   static const String boxName = 'favoritesBox';
 
-  Future<Box<HiveEvent.Event>> _openBox() async {
-    return await Hive.openBox<HiveEvent.Event>(boxName);
+  Future<Box<hive_event.Event>> _openBox() async {
+    return await Hive.openBox<hive_event.Event>(boxName);
   }
 
   /// Obtener todos los favoritos
@@ -40,19 +40,19 @@ class FavoritesDbManager {
   }
 
   /// Mapper: domain Event -> HiveEvent
-  HiveEvent.Event _toHiveEvent(Event domainEvent) {
-    return HiveEvent.Event(
+  hive_event.Event _toHiveEvent(Event domainEvent) {
+    return hive_event.Event(
       id: domainEvent.id!,
       title: domainEvent.title!,
       description: domainEvent.description!,
-      category: HiveEventCategory.EventCategory(
+      category: hive_event_category.EventCategory(
         id: domainEvent.category!.id!,
         name: domainEvent.category!.name!,
       ),
       startDate: domainEvent.startDate!,
       endDate: domainEvent.endDate!,
       imageUrl: domainEvent.imageUrl!,
-      location: HiveEventLocation.Location(
+      location: hive_event_location.Location(
         name: domainEvent.location!.name!,
         lat: domainEvent.location!.lat!,
         lng: domainEvent.location!.lng!,
@@ -61,7 +61,7 @@ class FavoritesDbManager {
   }
 
   /// Mapper: HiveEvent -> domain Event
-  Event _toDomainEvent(HiveEvent.Event hiveEvent) {
+  Event _toDomainEvent(hive_event.Event hiveEvent) {
     return Event(
       id: hiveEvent.id,
       title: hiveEvent.title,

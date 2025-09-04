@@ -13,9 +13,9 @@ class FavoritesLoading extends FavoritesState {
 }
 
 class FavoritesLoaded extends FavoritesState{
-  final List<Event> favorites;
 
   const FavoritesLoaded(this.favorites);
+  final List<Event> favorites;
 
   FavoritesLoaded copyWith({List<Event>? favorites}) {
     return FavoritesLoaded(
@@ -25,6 +25,6 @@ class FavoritesLoaded extends FavoritesState{
 }
 
 class FavoritesError extends FavoritesState {
-  final String message;
   const FavoritesError(this.message);
+  final String message;
 }
